@@ -1,0 +1,122 @@
+:root {
+    /* colours */
+    --white: #ffffff; /*text of table and title */
+    --blue: #0400ee;    /*text of Table Title Rows */
+    --black: #000000; /*Background */
+    --orange: #ee815a;  /*Every 2nd row of Table BG */
+
+    /* spacing */
+    --spacing-extra-small: 0.25rem;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    /* typography */
+    --font-size-small: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 1.5rem;
+    --font-size-extra-large: 2rem;
+
+    --font-stack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    /* borders */
+    --border-bottom-thick: 2px solid;
+    --border-bottom-thin: 1px solid;
+    /* animation */
+    --flare: 0.75s ease-in-out;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--black);
+    font-family: var(--font-stack-system) ;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__title {
+    color: var(--white);
+    font-size: var(--font-size-extra-large);
+    padding: var(--spacing-large);
+    border-bottom:var(--border-bottom-thick);
+    font-weight: bold;
+    width: 800px;
+}
+
+.container  {
+    display: flex;
+    justify-content: center;
+}
+
+
+.grid {
+    padding:var(--spacing-medium);
+    border-bottom:var(--border-bottom-thick);
+    width: 810px;
+}
+
+.grid__table {
+    color: var(--white);
+    padding:var(--spacing-medium);
+    border-spacing:var(--spacing-extra-small);
+    width: 100%;
+}
+
+.grid__thead {
+    font-size: var(--font-size-medium);
+    color: var(--blue);
+    border-bottom: var(--border-bottom-thin);
+    border-color:  var(--blue);
+    padding: var(--spacing-small);
+    text-align: center;
+}
+
+.grid__row {
+    font-size:var(--font-size-small);
+    padding:var(--spacing-large);
+    vertical-align: middle;
+}
+
+.grid__row--even {
+    background: var(--orange);
+}
+
+.grid__cell {
+    padding:var(--spacing-small) 0;
+    text-align: center;
+}
+
+.cell__name {
+    font-weight: bold;
+    letter-spacing:.1em;
+}
+
+
+.cell--inc {
+    -webkit-animation: inc var(--flare);
+    -moz-animation: inc var(--flare);
+    -o-animation: inc var(--flare);
+    animation: inc var(--flare);
+}
+
+.cell--dec {
+    -webkit-animation: dec var(--flare);
+    -moz-animation: dec var(--flare);
+    -o-animation: dec var(--flare);
+    animation: dec var(--flare);
+}
